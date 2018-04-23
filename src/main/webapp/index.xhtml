@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
-	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:b="http://bootsfaces.net/ui">
 <h:head>
 	<title>Controle de Trafego Aéreo</title>
 </h:head>
 <h:body>
 	<h1>Controle de Trafego Aéreo</h1>
+	
+	 <b:panel title="Live preview" look="info" collapsible="false">
+      <b:canvas style="width:100%"
+                width="1600"
+                height="900"
+                drawing="#{radarBean}" />
+	</b:panel>
 </h:body>
 </html>
