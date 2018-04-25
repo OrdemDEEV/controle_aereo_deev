@@ -8,12 +8,12 @@
 </h:head>
 <h:body>
 	<h1>Controle de Trafego Aéreo</h1>
-	
+	<h:outputLabel value="#{cordenadasBean.javaScript}" />
 	 <b:panel title="Live preview" look="info" collapsible="false">
       <b:canvas style="width:100%"
                 width="1600"
                 height="900"
-                drawing="#{radarBean}" />
+                drawing="#{cordenadasBean.radar}" />
 	</b:panel>
 </h:body>
 </html>

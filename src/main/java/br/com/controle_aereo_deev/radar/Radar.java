@@ -1,13 +1,9 @@
-package br.com.controle_aereo_deev.web;
-
-
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
+package br.com.controle_aereo_deev.radar;
 import net.bootsfaces.component.canvas.Drawing;
 
-@ManagedBean(name = "radarBean")
-@RequestScoped
-public class RadarBean extends Drawing {
+public class Radar extends Drawing {
+	
+	String javascript = "";
 	
 	{
 	    text(150, 40, "Tech Radar by BeyondJava", "24px Arial");
@@ -31,9 +27,17 @@ public class RadarBean extends Drawing {
 	 
 	    filledCircle(805+40+70, 470-105-20,5, "green");
 	    text(805+20+60, 470-100, "BootsFaces", "14px Arial");
+	    
+	    filledCircle(1, 1,5, "red");
 	 
 	    filledCircle(805+70+105, 470-210-10,5, "blue");
 	    text(800+40+105, 470-195, "AngularFaces", "14px Arial");
-	  }
+	    
+	    this.javascript = this.getJavaScript();
+	    
+	    
+	    
+	  }	
+	
 
 }
