@@ -8,11 +8,16 @@
 </h:head>
 <h:body>
 	<h1>Controle de Trafego Aéreo</h1>
-	<!--   <b:panel title="Live preview" look="info" collapsible="false">-->
+	<h:form id="radar">
       <b:canvas style="width:100%"
                 width="#{cordenadasBean.x}"
                 height="#{cordenadasBean.y}"
                 drawing="#{cordenadasBean.radar}" />
-<!--	</b:panel>  -->
+    </h:form>
+    <h:form id="atualizar">
+    <h:commandButton value="atualizar" action="#{cordenadasBean.atualizaRadar}">
+		<f:ajax execute="@form" render=":radar"/>
+	</h:commandButton>
+    </h:form>
 </h:body>
 </html>

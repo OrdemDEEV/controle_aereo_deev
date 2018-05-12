@@ -15,6 +15,13 @@ public class CordenadasBean {
 	private Radar radar = new Radar(X/2, Y/2);
 	
 	
+	public String atualizaRadar()
+	{
+	  this.radar = new Radar(X/2, Y/2, 50, 60);
+	  return null;
+	}
+	
+	
 	public Radar getRadar() {
 		return radar;
 	}
