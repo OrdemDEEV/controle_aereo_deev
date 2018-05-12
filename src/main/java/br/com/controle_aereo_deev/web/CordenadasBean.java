@@ -9,9 +9,10 @@ import br.com.controle_aereo_deev.radar.Radar;
 @RequestScoped
 public class CordenadasBean {
 	
-	private Radar radar = new Radar();
-	private String javaScript = new String();
 	
+	private int X = 1600;
+	private int Y = 900;
+	private Radar radar = new Radar(X/2, Y/2);
 	
 	
 	public Radar getRadar() {
@@ -22,13 +23,25 @@ public class CordenadasBean {
 		this.radar = radar;
 	}
 
-	public String getJavaScript() {
-		return radar.getJavaScript();
+	public int getX() {
+		return X;
 	}
 
-	public void setJavaScript(String javaScript) {
-		this.javaScript = javaScript;
+	public void setX(int x) {
+		X = x;
 	}
+
+	public int getY() {
+		return Y;
+	}
+
+	public void setY(int y) {
+		Y = y;
+	}
+	
+	
+	
+	
 	
 	
 	
